@@ -1,18 +1,34 @@
 <html>
     <head>Museum</head>
     <body>
-
-        <a href="itms-services://?action=download-manifest&url=https://atul109.github.io/museum.plist"> Download</a>
-        
-         <a href="itms-services://atul109.github.io/museum.plist"> Download</a>
-        
-        <button onclick="buttonAction()">Click me</button>
-        
+      
+        <div class="container">
+          <div class="vertical-center">
+            <button onclick="buttonAction()">Download</button>
+          </div>
+        </div>
+       
         <script>
             function buttonAction(){
                 window.open("itms-services://?action=download-manifest&url=https://atul109.github.io/museum.plist");
             }
         </script>
+        
+        <style>
+        .container { 
+          height: 200px;
+          position: relative;
+          border: 3px solid green; 
+        }
+
+        .vertical-center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+        </style>
 
     </body>
 </html>
