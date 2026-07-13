@@ -1,0 +1,220 @@
+:root {
+  --bg: #000000;
+  --surface: #1e1e1e;
+  --surface-2: #2a2a2a;
+  --outline: #3d3d3d;
+  --primary: #d0bcff;
+  --primary-strong: #6750a4;
+  --text: #f2f2f2;
+  --text-dim: #b8b8b8;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+
+  /* Static colourful backdrop for the glass cards to blur against */
+  background-color: #12081f;
+  background-image:
+    radial-gradient(38rem 38rem at 12% 18%, rgba(255, 61, 129, 0.55), transparent 60%),
+    radial-gradient(34rem 34rem at 88% 12%, rgba(0, 209, 255, 0.50), transparent 60%),
+    radial-gradient(40rem 40rem at 78% 82%, rgba(124, 58, 237, 0.60), transparent 62%),
+    radial-gradient(32rem 32rem at 22% 88%, rgba(255, 189, 0, 0.42), transparent 60%),
+    radial-gradient(30rem 30rem at 50% 50%, rgba(16, 185, 129, 0.35), transparent 65%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Hero ---------- */
+.hero {
+  /* Soft dark scrim over the colourful backdrop to keep hero text legible */
+  background: linear-gradient(180deg, rgba(10, 6, 20, 0.35) 0%, rgba(10, 6, 20, 0.10) 100%);
+  padding-bottom: 3rem;
+}
+
+.nav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+.brand:hover { text-decoration: none; }
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+  color: #1a0f2e;
+  font-size: 0.85rem;
+}
+
+.hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  line-height: 1.1;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.lede {
+  font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+  color: var(--text-dim);
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+}
+
+/* ---------- Play button ---------- */
+.play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #000;
+  border: 1px solid #555;
+  border-radius: 12px;
+  padding: 0.7rem 1.4rem;
+  color: #fff;
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+.play-btn:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  background: #0d0d0d;
+}
+
+.play-icon { width: 26px; height: 26px; flex-shrink: 0; }
+
+.play-btn-text { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
+.play-btn-text small { font-size: 0.62rem; letter-spacing: 0.08em; color: #cfcfcf; }
+.play-btn-text strong { font-size: 1.2rem; font-weight: 600; }
+
+.platform-note {
+  margin-top: 1.1rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+/* ---------- Features ---------- */
+.features {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
+  padding: 1.6rem;
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+.feature:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.11);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.feature-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--primary-strong);
+  color: #eaddff;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+.feature h3 { margin: 0 0 0.4rem; font-size: 1.15rem; }
+.feature p { margin: 0; color: #e6e2ef; font-size: 0.95rem; }
+
+/* ---------- Footer ---------- */
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(10, 6, 20, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem 1.5rem 2.5rem;
+  text-align: center;
+}
+.footer-links { font-size: 0.95rem; }
+.footer-links .dot { color: var(--text-dim); margin: 0 0.6rem; }
+.copyright { margin: 0.9rem 0 0; color: var(--text-dim); font-size: 0.85rem; }
+
+/* ---------- Legal pages ---------- */
+.legal {
+  max-width: 760px;
+  width: calc(100% - 2rem);
+  margin: 3rem auto;
+  padding: 2.5rem 2rem 3rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+.legal .back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+.legal .back:hover {
+  text-decoration: none;
+  transform: translateX(-2px);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.legal .back svg { width: 20px; height: 20px; display: block; }
+.legal h1 { font-size: clamp(1.8rem, 5vw, 2.4rem); margin: 0 0 0.3rem; }
+.legal .updated { color: var(--text-dim); font-size: 0.9rem; margin: 0 0 2rem; }
+.legal h2 { font-size: 1.25rem; margin: 2rem 0 0.6rem; }
+.legal p, .legal li { color: #dcdcdc; }
+.legal ul { padding-left: 1.2rem; }
+.legal a { word-break: break-word; }
