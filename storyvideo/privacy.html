@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — StoryVideo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <article class="legal">
+    <a class="back" href="../index.html" aria-label="Back to StoryVideo" title="Back to StoryVideo">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: August 18, 2026</p>
+
+    <p>
+      This Privacy Policy explains how the StoryVideo mobile application
+      (the "App"), published by Atul Vasudev A ("we", "us", or "our"),
+      handles information when you use it. StoryVideo turns text you write into
+      short AI-generated videos. By using the App you agree to the practices
+      described below.
+    </p>
+
+    <h2>1. Information we collect</h2>
+    <ul>
+      <li><strong>Account information.</strong> When you sign in, we collect basic
+        account details such as your email address and a user identifier through
+        our authentication provider (Firebase Authentication, including Google
+        Sign-In).</li>
+      <li><strong>Content you write.</strong> The stories you paste or type, the
+        scene prompts you edit, the descriptions you write for your reference
+        images, and the settings you choose for each video.</li>
+      <li><strong>Photos and images you choose.</strong> If you add reference
+        images to a story, the App copies each image you select from your device
+        into its own storage at a reduced size and uploads it to our servers, where
+        it is kept in your personal reference library so you can reuse it in later
+        stories. These images are sent to our video-generation infrastructure as
+        input for your video. We do not scan your photo library — the App only
+        receives the specific images you pick using your device's own picker.</li>
+      <li><strong>Camera (optional).</strong> If you use the "scan" feature to
+        import printed text, the App opens your camera and saves the photo to its
+        private cache on your device. Text is extracted <em>on your device</em>;
+        the photo itself is never uploaded to us or to any third party, and it is
+        removed when the App's cache is cleared or the App is uninstalled. Camera
+        permission is requested only at the moment you use this feature, and the
+        rest of the App works without it.</li>
+      <li><strong>Voice input (optional).</strong> If you dictate a story instead
+        of typing it, the App hands off to your device's built-in speech
+        recognition, which is provided by your device or its operating system
+        vendor and processed under that vendor's privacy policy. We receive only
+        the resulting text.</li>
+      <li><strong>Generated content.</strong> The scene prompts, character
+        reference images and video clips produced for you, along with related
+        project data, so you can come back to them across sessions and devices.</li>
+      <li><strong>Content reports.</strong> If you report generated content as
+        offensive, we store the reason you selected, any details you write, and a
+        reference to the reported content and to your account, so that we can
+        review it and act on it.</li>
+      <li><strong>Notification token.</strong> A push-notification token for your
+        device, so we can tell you when a video has finished generating. You can
+        decline or revoke notification permission at any time.</li>
+      <li><strong>Advertising data.</strong> The App shows rewarded and native ads.
+        Our advertising partner collects your device's advertising ID, IP address,
+        device and app information, and your interactions with ads, in order to
+        serve and measure them. See section 4.</li>
+      <li><strong>Usage &amp; diagnostic data.</strong> Analytics and crash data
+        that help us understand app performance and fix problems, including a
+        device advertising or installation identifier.</li>
+      <li><strong>Device integrity signals.</strong> To prevent abuse of our
+        generation service, the App verifies that requests come from a genuine
+        installation using Google Play Integrity via Firebase App Check.</li>
+      <li><strong>Purchase information.</strong> If you buy credits, the transaction
+        is handled by Google Play. We receive confirmation of the purchase and your
+        credit balance, but not your full payment card details.</li>
+    </ul>
+
+    <h2>2. How we use your information</h2>
+    <ul>
+      <li>To generate videos from the stories, prompts and reference images you provide.</li>
+      <li>To keep your stories, reference library and generated videos available to you.</li>
+      <li>To notify you when a generation job finishes.</li>
+      <li>To operate, maintain, and improve the App.</li>
+      <li>To manage your account, credits, and purchases.</li>
+      <li>To screen submissions for prohibited content, review reports, and enforce
+        our <a href="terms.html">Terms of Use</a>.</li>
+      <li>To diagnose issues, prevent abuse and fraud, and keep the service secure.</li>
+      <li>To show and measure advertising.</li>
+    </ul>
+
+    <h2>3. AI generation, and how your content is processed</h2>
+    <p>
+      Videos in StoryVideo are produced by generative AI models. To make one, your
+      content is processed as follows:
+    </p>
+    <ul>
+      <li><strong>Splitting your story into scenes.</strong> Your story text is
+        sent to Google's Gemini models through Firebase AI Logic, which returns the
+        scene prompts you then review and edit.</li>
+      <li><strong>Generating video and character images.</strong> Your scene
+        prompts and any reference images are sent to our video-generation
+        infrastructure, which runs AI models to produce the clips and character
+        reference images.</li>
+      <li><strong>Automated content screening.</strong> Text you submit is checked
+        against our content rules before it is sent, and submitted images and
+        generated results are screened automatically. Content that appears to
+        breach our rules is refused and the request is not generated.</li>
+      <li><strong>Stitching.</strong> Combining your clips into the final video
+        happens on your device.</li>
+    </ul>
+    <p>
+      Generated results are labelled as AI-generated inside the App and in the
+      text suggested when you share them. If any generated result is offensive,
+      you can report it from within the App — from a story, from the video player,
+      or from an individual clip — without leaving the App. We review reports and
+      use them to improve our filtering.
+    </p>
+    <p>
+      Do not upload images of other people without their permission, and do not use
+      the App to depict real people misleadingly. See our
+      <a href="terms.html">Terms of Use</a> for the full content rules.
+    </p>
+
+    <h2>4. Advertising and your advertising ID</h2>
+    <p>
+      The App displays ads, including rewarded video ads you can choose to watch to
+      earn credits, and native ads in the app's lists. Advertising is delivered by
+      <strong>InMobi</strong>, which acts as an independent controller of the data
+      it collects for this purpose, including your device's advertising ID
+      (the App declares the <code>AD_ID</code> permission for this reason), IP
+      address, device characteristics, and ad interactions. This data may be used
+      for ad delivery, frequency capping, measurement and personalisation under
+      InMobi's own privacy policy.
+    </p>
+    <p>
+      You can reset or delete your advertising ID, and opt out of ad
+      personalisation, in your device settings (on Android:
+      <em>Settings → Privacy → Ads</em>). Watching a rewarded ad is always your
+      choice; credits can also be purchased instead.
+    </p>
+
+    <h2>5. Third-party services</h2>
+    <p>
+      The App relies on the following services, which may process data on our
+      behalf or, where noted, for their own purposes:
+    </p>
+    <ul>
+      <li><strong>Google Firebase</strong> — authentication, database (Firestore),
+        file storage, cloud messaging, analytics, and app integrity (App Check with
+        Play Integrity).</li>
+      <li><strong>Firebase AI Logic with Google Gemini</strong> — splitting your
+        story into scene prompts.</li>
+      <li><strong>Our video-generation infrastructure and the AI models it runs</strong>
+        — producing your video clips and character reference images from your
+        prompts and reference images.</li>
+      <li><strong>Google Play Billing</strong> — credit purchases.</li>
+      <li><strong>InMobi</strong> — advertising, as described in section 4.</li>
+      <li><strong>Your device's speech recognition</strong> — only if you use voice
+        input.</li>
+    </ul>
+    <p>
+      These providers process data under their own privacy policies, and may store
+      or process it in countries other than the one you live in, including the
+      United States.
+    </p>
+
+    <h2>6. Data retention</h2>
+    <p>
+      We retain your account, stories, reference library and generated videos for
+      as long as your account is active or as needed to provide the service.
+      Reference images stay in your library until you remove them there or delete
+      your account, because a single image can be reused across several stories.
+      Camera scans stay only in the App's private cache on your device.
+      Records of content reports and enforcement action are retained for as long as
+      needed for safety and abuse prevention, and may outlive the account they
+      relate to. Diagnostic and analytics data is retained on our providers'
+      standard schedules.
+    </p>
+
+    <h2>7. Deleting your data and your account</h2>
+    <p>
+      You can permanently delete your account and associated data at any time
+      directly from within the App — no email request is required. This removes
+      your account, your stories and scene prompts, your generated videos, your
+      uploaded reference images, and your remaining credit balance. See
+      <a href="delete-data.html">Delete Your Data</a> for step-by-step instructions.
+    </p>
+    <p>
+      If you cannot access the App, you can request deletion by contacting us at
+      the address in section 12 and we will process it for you. As noted in
+      section 6, safety and abuse-prevention records may be kept, as may records we
+      are required by law to retain.
+    </p>
+
+    <h2>8. Children's privacy</h2>
+    <p>
+      The App is not directed to children under 13 (or the minimum age required in
+      your jurisdiction), and we do not knowingly collect personal information from
+      them. The App generates AI content and shows advertising, and is intended for
+      a general adult audience. If you believe a child has provided us with personal
+      information, contact us and we will delete it.
+    </p>
+
+    <h2>9. Security</h2>
+    <p>
+      Your content is stored in access-controlled Google Cloud infrastructure, and
+      requests to our generation service are attested with Firebase App Check.
+      Your stories, reference images and videos are stored under your own account
+      and are not visible to other users of the App. No system is perfectly secure,
+      but we take reasonable measures to protect your information.
+    </p>
+
+    <h2>10. Your choices and rights</h2>
+    <ul>
+      <li>You can delete your data and account at any time from within the App, and
+        stop all collection by uninstalling it.</li>
+      <li>Camera, notification and voice-input access are each optional, requested
+        only when used, and revocable in your device settings.</li>
+      <li>You can reset your advertising ID or opt out of ad personalisation in
+        your device settings.</li>
+      <li>Depending on where you live, you may have the right to access, correct,
+        export, or delete your personal data, or to object to certain processing.
+        Contact us and we will respond.</li>
+    </ul>
+
+    <h2>11. Changes to this policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Changes will be posted
+      on this page with an updated "Last updated" date.
+    </p>
+
+    <h2>12. Contact us</h2>
+    <p>
+      If you have questions about this Privacy Policy, or want to exercise any of
+      the rights above, contact us at
+      <a href="mailto:atulvasudev2008@gmail.com">atulvasudev2008@gmail.com</a>.
+    </p>
+
+    <p style="margin-top:2.5rem;"><a href="../index.html">← Back to StoryVideo</a></p>
+  </article>
+</body>
+</html>
